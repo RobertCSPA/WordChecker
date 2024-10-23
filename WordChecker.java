@@ -11,8 +11,15 @@ public class WordChecker {
      * Postcondition: wordList is unchanged.
      */
     public boolean isWordChain() {
-        boolean wordchain = true;
-        return wordchain;
+        boolean chain = true;
+        for (int i = 0; i < wordList.size()-1; i++){
+            String before = wordList.get(i);
+            String after = wordList.get(i+1);
+            if(after.indexOf(before) < 0){
+                chain = false;
+            }
+        }
+        return chain;
     }
     /**
      * Returns an ArrayList<String> based on strings from wordList that start
