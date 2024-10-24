@@ -32,6 +32,12 @@ public class WordChecker {
      */
     public ArrayList<String> createList(String target) {
         ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i < wordList.size(); i++){
+            if (wordList.get(i).substring(0,3).equals("cat")){
+                list.add(wordList.get(i).substring(3));
+            }
+        }
+
         return list;
     }
 }
